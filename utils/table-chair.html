@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(44, 122, 44);
+            padding: 50px;
+        }
+        .card-cont{
+            width: 300px;
+            height: 200px; 
+            position: relative;  
+        }
+        .blur-card{
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba( 255, 255, 255, 0.2 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 8px );
+            -webkit-backdrop-filter: blur( 8px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+        .chair-container{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .chair-item{
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .chair-top-row{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: -24px 0;
+        }
+        .chair-bottom-row{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: -24px 0;
+        }
+        .chair-left-row{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            margin: 0 -24px;
+            justify-content: space-around;
+        }
+        .chair-right-row{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            margin: 0 -24px;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-cont">
+        <div class="blur-card">
+
+        </div>
+        <div class="chair-container">
+            <div class="chair-top-row">
+                <div class="chair-item"></div>
+                <div class="chair-item"></div>
+            </div>
+            <div class="chair-bottom-row">
+                <div class="chair-item"></div>
+                <div class="chair-item"></div>
+            </div>
+            <div class="chair-left-row">
+                <div class="chair-item"></div>
+                <!-- <div class="chair-item"></div> -->
+            </div>
+            <div class="chair-right-row">
+                <div class="chair-item"></div>
+                <!-- <div class="chair-item"></div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
