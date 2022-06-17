@@ -4,7 +4,8 @@ import { getWithToken } from "../../utils/request";
 import { ActionType, ActionTypes } from "../ActionTypes";
 
 export interface IBookingState {
-    slots: IBookingSlots | null
+    slots: IBookingSlots | null,
+    selectedTable: QueryParam | null
 }
 
 // ---------------------------------action-interfaces---------------------------
@@ -12,10 +13,13 @@ export interface BookingAction {
     type: typeof ActionType.GET_SLOTS,
     payload: IBookingSlots
 }
-
+export interface SelectedTableAction {
+    type: typeof ActionType.SELECTED_TABLE,
+    payload: QueryParam
+}
 type QueryParam = {
     tableNumber: number,
-    date: Date | string
+    date: string
 }
 export interface IBookingSlots {
     allSlots: any,
@@ -32,9 +36,14 @@ export const getBookingSlots = (query: QueryParam) => {
             availableSlots: response.data.availableSlots,
             bookedSlots: response.data.bookedSlots
         };
+        
         dispatch({
             type: ActionType.GET_SLOTS,
             payload: result
+        })
+        dispatch({
+            type: ActionType.SELECTED_TABLE,
+            payload: query
         })
     }
 }

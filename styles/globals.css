@@ -14,6 +14,81 @@ a {
     box-sizing: border-box;
 }
 
+
+.fntSz10 {
+    font-size: 10px !important;
+}
+.fntSz11 {
+    font-size: 11px !important;
+}
+.fntSz12 {
+    font-size: 12px !important;
+}
+.fntSz13 {
+    font-size: 13px !important;
+}
+.fntSz14 {
+    font-size: 14px !important;
+}
+.fntSz15 {
+    font-size: 15px !important;
+}
+.fntSz16 {
+    font-size: 16px !important;
+}
+.fntSz17 {
+    font-size: 17px !important;
+}
+.fntSz18 {
+    font-size: 18px !important;
+}
+.fntSz19 {
+    font-size: 19px !important;
+}
+.fntSz20 {
+    font-size: 20px !important;
+}
+.fntSz21 {
+    font-size: 21px !important;
+}
+.fntSz21 {
+    font-size: 21px !important;
+}
+.fntSz22 {
+    font-size: 22px !important;
+}
+.fntSz23 {
+    font-size: 23px !important;
+}
+.fntSz24 {
+    font-size: 24px !important;
+}
+.fntSz25 {
+    font-size: 25px !important;
+}
+.fntSz26 {
+    font-size: 26px !important;
+}
+.fntSz27 {
+    font-size: 27px !important;
+}
+.fntSz28 {
+    font-size: 28px !important;
+}
+.fntSz29 {
+    font-size: 29px !important;
+}
+.fntSz30 {
+    font-size: 30px !important;
+}
+.text_wrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.pointer{
+    cursor: pointer;
+}
 /* loading component */
 .loading_wrapper {
     width: 200px;
@@ -151,6 +226,7 @@ a {
     color: #fff;
 }
 .availablity_table {
+    z-index: 10;
     width: 200px;
 }
 .availablity_table .date_section{
@@ -170,6 +246,158 @@ a {
   background-color: black;
   cursor: pointer;
 }
+.availablity_table ul li.active{
+    background-color: #00000061;
+    cursor: pointer;
+  }
 .availablity_table .slot_time{
   padding-left: 10px;
 }
+.slots-container{
+    position: sticky;
+    top: 0;
+    border-radius: 10px;
+    min-height: 93vh;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.border-none{
+    border: none !important;
+}
+
+/** ---------- hotel room --------------- */
+.hotel_room{
+    width: calc(100vw - 230px);
+    min-height: calc(100vh - 90px);
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.card-cont{
+    width: 200px;
+    height: 100px; 
+    position: relative;
+    margin:30px 50px 50px 50px;
+}
+.blur-card{
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 14px );
+    -webkit-backdrop-filter: blur( 14px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 4px solid #84d326;
+    cursor: pointer;
+}
+.blur-card.green{
+    border-left-color: #84d326;
+}
+.blur-card.yellow{
+    border-left-color: #efa73a;
+}
+.blur-card.red{
+    border-left-color: #dd4931;
+}
+.blur-card > div:first-child{
+    align-self: self-end;
+    font-weight: bold;
+    padding: 6px 8px;
+    font-size: 20px;
+}
+.blur-card > div:nth-child(2){
+    align-self: self-start;
+    /* font-weight: bold; */
+    padding: 8px;
+}
+.blur-card > div:nth-child(3){
+    position: absolute;
+    padding: 10px;
+    font-weight: bold;
+}
+.blur-card.selected{
+    background-color: #263f34c2;
+}
+.chair-container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.chair-item{
+    background-color: #8c6a28;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.chair-top-row{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: -18px 0;
+}
+.chair-bottom-row{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: -18px 0;
+}
+.chair-left-row{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -18px;
+    justify-content: space-around;
+}
+.chair-right-row{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -18px;
+    justify-content: space-around;
+}
+
+
+/** ---------- hotel room end --------------- */
+
+.reservation-container{
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    min-height: 330px;
+    min-width: 250px;
+    background-color: #1b3130f0;
+    box-shadow: 0 8px 32px 0 rgb(38 63 52);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
